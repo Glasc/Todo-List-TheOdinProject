@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: lato;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  line-height: 1.3;
+  background-color: rgb(207, 207, 207);
+  position: relative;
+}
+
+ul {
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+.container {
+  width: 95%;
+  height: 95%;
+  border-radius: 15px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 60px auto;
+}
+
+/* nav */
+
+nav {
+  background-color: #01172b;
+  grid-column: span 2;
+  color: white;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.3em;
+}
+
+nav > h1 {
+  font-size: 1.75rem;
+}
+
+/* aside */
+
+aside {
+  background-color: #15314b;
+  grid-column: span 1;
+  color: white;
+  padding: 1em;
+  overflow: auto;
+}
+.project-header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.project-header {
+  background-color: #15314b;
+}
+.btn-add-project {
+  cursor: pointer;
+}
+
+#newProject-form {
+}
+
+.form-control-newProject {
+  margin: 1em 0;
+}
+
+.form-control-newProject input:nth-child(1) {
+  font-size: 1rem;
+  padding: 0.5em;
+  width: 100%;
+  border: none;
+}
+
+.project-list {
+}
+.project-list > ul * {
+  margin: 0.7em 0;
+  border: 3px solid transparent;
+  padding: 0.4em;
+  background-color: #01172b;
+  border-left: 3px solid #8343eb;
+}
+.project-list > ul *:hover {
+  cursor: pointer;
+  background-color: #8343eb;
+  transition: all 300ms;
+}
+
+/* main */
+
+main {
+  background-color: white;
+  grid-column: span 1;
+  margin: 0.75em;
+  overflow: auto;
+}
+
+#form-add {
+  width: 100%;
+  background-color: #01172b;
+  padding: 0.6em 0.5em;
+  display: flex;
+  gap: 0 1em;
+  border-left: 3px solid #8343eb;
+}
+
+#form-add input {
+  border: none;
+  padding: 0.5em;
+  font-size: 1rem;
+}
+
+.form-control:nth-child(1) {
+  flex-grow: 1;
+}
+.form-control:nth-child(2) {
+  flex-grow: 5;
+}
+
+.form-control:nth-child(1) > input,
+.form-control:nth-child(2) > input {
+  width: 100%;
+}
+
+.task {
+  width: 200px;
+  margin: 1em 0;
+  padding: 1.5em 1em;
+  padding-top: 2em;
+  background-color: #0f0f0ffb;
+  color: white;
+  position: relative;
+  border-left: 3px solid #8343eb;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.task > #btn-erase {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.task > #btn-edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 2.5em;
+}
+
+.task-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+/* main - edit */
+
+.edit-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.edit-wrapper {
+  background-color: #0d243a;
+  color: white;
+  width: 300px;
+  padding: 2em 1em;
+}
+#edit-form {
+}
+.form-control-edit * {
+  display: block;
+  margin: 0.5em;
+}
+.form-control-edit {
+  margin: 1em;
+}
+.form-control-edit input {
+  text-align: center;
+  border: none;
+  width: 100%;
+  margin: 0;
+  padding: 0.5em 0;
+  font-size: 1rem;
+  display: block;
+}
+.form-control-edit input[type='submit'] {
+  margin: 0 auto;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 35px;
+  padding: 0.5em 0;
+  transition: ease 300ms;
+}
+.form-control-edit input[type='submit']:hover {
+  background-color: #8343eb;
+  transition: ease 300ms;
+  color: white;
+}
+/* miscelaneo */
+
+#btn-erase,
+#btn-edit {
+  cursor: pointer;
+  padding: 8px;
+}
+.btnSubmitTask {
+  cursor: pointer;
+}
+
+.showInputAddProject {
+  display: none;
+}
+
+.displayNone {
+  display: none;
+}
